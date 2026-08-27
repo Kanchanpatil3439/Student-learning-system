@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SkillPath AI | Personalized Student Career Roadmap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="toast" class="toast"></div>
+
+<!-- LOGIN -->
+<section id="loginScreen" class="screen login-screen">
+  <div class="login-art">
+    <div class="glow g1"></div><div class="glow g2"></div>
+    <div class="brand"><div class="brand-logo">✦</div><div><b>SkillPath<span> AI</span></b><small>Career intelligence for engineering students</small></div></div>
+    <div class="hero-copy">
+      <div class="pill">✦ AI-POWERED STUDENT ROADMAP</div>
+      <h1>Turn your engineering journey into a <em>clear career path.</em></h1>
+      <p>Know what to learn, what to build, what to improve and what to do next — from 1st year to your first job.</p>
+      <div class="hero-points">
+        <span>✓ Personalized roadmap</span><span>✓ Skill-gap analysis</span><span>✓ AI mentor</span>
+      </div>
+    </div>
+    <div class="login-stat"><strong>4 Years</strong><span>of guided growth</span><strong>28+</strong><span>skill milestones</span><strong>AI</strong><span>career guidance</span></div>
+  </div>
+  <div class="login-panel">
+    <div class="mobile-brand"><div class="brand-logo">✦</div><b>SkillPath<span> AI</span></b></div>
+    <div class="login-card">
+
+  <!-- Login / Signup Tabs -->
+  <div class="auth-tabs">
+    <button id="loginTab" class="auth-tab active" onclick="showAuth('login')">
+      Login
+    </button>
+
+    <button id="signupTab" class="auth-tab" onclick="showAuth('signup')">
+      Sign Up
+    </button>
+  </div>
+
+  <!-- Authentication Form -->
+  <div id="authContent"></div>
+
+</div>
+    <p class="login-footer">Built for engineering students • Personalized with AI</p>
+  </div>
+</section>
+
+<!-- APP -->
+<div id="app" class="app hidden">
+<aside class="sidebar" id="sidebar">
+  <div class="brand side-brand"><div class="brand-logo">✦</div><div><b>SkillPath<span> AI</span></b><small>Career intelligence</small></div></div>
+  <div class="student-mini"><div class="avatar" id="miniAvatar">SP</div><div><b id="miniName">Student</b><small id="miniCourse">Engineering Student</small></div></div>
+  <nav>
+    <small class="nav-title">WORKSPACE</small>
+    <button class="nav active" data-page="dashboard">⌂ <span>Dashboard</span></button>
+    <button class="nav" data-page="roadmap">⌁ <span>My Roadmap</span></button>
+    <button class="nav" data-page="skills">◇ <span>My Skills</span></button>
+    <button class="nav" data-page="projects">◈ <span>Projects</span></button>
+    <button class="nav" data-page="learning">▣ <span>Learning Hub</span></button>
+    <button class="nav" data-page="progress">◔ <span>Progress</span></button>
+    <button class="nav" data-page="career">↗ <span>Career</span></button>
+    <small class="nav-title">CAREER TOOLS</small>
+    <button class="nav" data-page="cv">▤ <span>CV Analyzer</span><b>NEW</b></button>
+    <button class="nav" data-page="mentor">✦ <span>AI Mentor</span></button>
+  </nav>
+  <div class="side-bottom">
+  <button class="nav" data-page="notifications">
+    ♢ <span>Notifications</span><i>3</i>
+  </button>
+
+  <button class="nav" data-page="profile">
+    ○ <span>Profile</span>
+  </button>
+
+  <button class="nav" data-page="settings">
+    ⚙ <span>Settings</span>
+  </button>
+
+  <button type="button" class="nav logout-btn" id="logoutBtn">
+    ⇥ <span>Logout</span>
+  </button>
+</div>
+</aside>
+
+<main class="main">
+<header class="topbar">
+  <button class="hamb" onclick="toggleSide()">☰</button>
+  <div class="crumb" id="crumb">Workspace / <b>Dashboard</b></div>
+  <div class="top-right"><button class="search" onclick="openSearch()">⌕ <span>Search anything...</span><kbd>Ctrl K</kbd></button><button class="bell" onclick="go('notifications')">♢<i></i></button><div class="avatar small" id="topAvatar">SP</div></div>
+</header>
+<div class="page" id="page"></div>
+</main>
+</div>
+
+<div class="modal-back" id="modal"><div class="modal-box" id="modalBox"></div></div>
+<script src="script.js"></script>
+</body>
+</html>
